@@ -1,0 +1,19 @@
+.empty {
+	width: 100%;
+	margin-top: 146px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.empty-icon {
+	margin-bottom: 32px;
+}
+
+.empty-description {
+	width: 252px;
+	margin: auto;
+	font-size: 14px;
+	line-height: 1.75;
+	text-align: center;
+}

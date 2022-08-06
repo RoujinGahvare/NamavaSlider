@@ -1,0 +1,38 @@
+.search-box-container {
+	margin-top: 80px;
+}
+.search-box {
+	margin: 0 43px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 85vw;
+	background-color: var(--headline-color);
+	border-radius: 10px;
+	padding: 0 16px;
+}
+.search-input {
+	width: 100%;
+	font-family: inherit;
+	font-size: 14px;
+	line-height: 60px;
+	margin: 0 6px 0 6px;
+	outline: none;
+}
+::placeholder {
+	color: var(--background-color);
+	opacity: 1;
+	font-family: inherit;
+}
+.search img {
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.nav-container .nav-tabs {
+	font-family: var(--font-iranyekan);
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 90px;
+}

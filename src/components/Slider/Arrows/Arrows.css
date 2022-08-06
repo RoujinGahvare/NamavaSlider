@@ -1,0 +1,65 @@
+/**************************/
+/* Arrow */
+/**************************/
+.arrow-container {
+	position: relative;
+}
+.arrow {
+	display: flex;
+	position: absolute;
+	bottom: 7.7vw;
+	left: 42px;
+}
+.circle {
+	position: relative;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(114, 114, 114, 0.438);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.circle:after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 1;
+	border-bottom: 2px solid rgb(158, 158, 158);
+	border-right: 2px solid rgb(158, 158, 158);
+	height: 8px;
+	width: 8px;
+}
+.circle.prev::after {
+	transform: rotate(135deg);
+}
+.circle.next {
+	margin-left: 12px;
+}
+.circle.next::after {
+	transform: rotate(-45deg);
+}
+.circle:hover::after {
+	border-bottom: 3px solid #fff;
+	border-right: 3px solid #fff;
+}
+/**************************/
+/* media queries under 1280px  */
+/**************************/
+@media (max-width: 1280px) {
+	.arrow {
+		bottom: 0;
+		left: 32px;
+	}
+}
+
+/**************************/
+/* media queries under 800px  */
+/**************************/
+@media (max-width: 800px) {
+	.arrow-container {
+		display: none;
+	}
+}

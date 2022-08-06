@@ -1,0 +1,178 @@
+/**************************/
+/* HEADER */
+/**************************/
+.header {
+	z-index: 1;
+	height: 80px;
+	padding: 0 43px;
+	background: linear-gradient(
+		180deg,
+		var(--background-secondary-color) 0%,
+		rgba(18, 18, 18, 0.0001) 99.86%
+	);
+	background-image: linear-gradient(
+		to bottom,
+		rgba(18, 18, 18, 1),
+		rgba(18, 18, 18, 0)
+	);
+	position: absolute;
+	display: flex;
+	align-items: center;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+.main-nav {
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+}
+.main-nav-links {
+	display: flex;
+	align-items: center;
+}
+
+.main-nav-items {
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+.logo {
+	margin-left: 32px;
+	display: block;
+}
+.main-nav-items a {
+	margin-left: 32px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 40px;
+	cursor: pointer;
+	text-decoration: none;
+}
+.main-nav-items img {
+	display: none;
+}
+
+.t-icon-0-1-153 {
+	height: 40px;
+	min-width: 40px;
+	fill: var(--headline-color);
+}
+svg {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.btn:link,
+.btn:visited {
+	text-decoration: none;
+	color: var(--headline-color);
+	display: inline-block;
+	margin-right: 20px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 36px;
+}
+.btn:hover,
+.btn:active {
+	color: var(--Blue-color);
+}
+.btn-full {
+	padding: 0 10px;
+	border: 1px solid var(--headline-color);
+	border-radius: 5px;
+}
+
+.btn-full:hover,
+.btn-full:active {
+	background-color: var(--headline-color);
+	color: var(--background-color);
+}
+
+.icon-mobile-nav {
+	display: inline-block;
+	vertical-align: middle;
+	stroke: #fff;
+	margin-left: 10px;
+	cursor: pointer;
+	display: none;
+}
+.Icons {
+	display: none;
+}
+
+/**************************/
+/* media queries under 1280px  */
+/**************************/
+@media (max-width: 1280px) {
+	.logo {
+		margin-left: 18px;
+	}
+	.main-nav-items a {
+		margin-left: 18px;
+		font-size: 12px;
+		line-height: 30px;
+	}
+}
+/**************************/
+/* media queries under 800px  */
+/**************************/
+
+@media (max-width: 800px) {
+	.main-nav-items {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #222327;
+		width: 34vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+		justify-content: flex-start;
+		padding-top: 60px;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateX(100%);
+		transition: all 0.3s ease-out;
+		visibility: hidden;
+	}
+	.nav-open .main-nav-items {
+		opacity: 1;
+		transform: translateX(0);
+		transition: all 0.3s ease-in;
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	.icon-mobile-nav {
+		display: block;
+		z-index: 10000;
+	}
+
+	.Icons {
+		display: block;
+		margin-left: 15px;
+	}
+	.nav-blocks {
+		display: flex;
+		justify-content: flex-start;
+		width: 34vw;
+		align-items: center;
+		padding: 15px 24px 15px 0;
+	}
+	.logo {
+		position: relative;
+		z-index: 100000;
+	}
+	.left svg {
+		height: 30px;
+		left: 30px;
+		margin-left: -16px;
+	}
+	.btn-full {
+		padding: 0px;
+		border: none;
+		border-radius: 5px;
+	}
+}

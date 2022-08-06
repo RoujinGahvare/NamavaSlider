@@ -1,0 +1,9 @@
+{/* <div
+										className="slide-image"
+										style={{
+											backgroundImage:
+												windowWidth >= 760
+													? `url(https://static.namava.ir${slide.coverLandscape})`
+													: `url(https://static.namava.ir${slide.coverPortrait})`,
+										}}
+									/> */}
