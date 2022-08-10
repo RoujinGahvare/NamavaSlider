@@ -41,10 +41,10 @@ const Slider = () => {
 		};
 	}, []);
 
-	// useEffect(() => {
-	// 	let interval = setInterval(nextSlide, 7000);
-	// 	return () => clearInterval(interval);
-	// }, [currentSlide, nextSlide]);
+	 useEffect(() => {
+		let interval = setInterval(nextSlide, 7000);
+	 	return () => clearInterval(interval);
+	 }, [currentSlide, nextSlide]);
 
 	useEffect(() => {
 		setCurrentSlide(0);
