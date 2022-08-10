@@ -1,0 +1,31 @@
+.slider {
+	position: relative;
+	padding-bottom: 40px;
+}
+.slide {
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+.current {
+	opacity: 1;
+	transition: all 1s ease;
+}
+.dots-container {
+	position: absolute;
+}
+/**************************/
+/* media queries under 800px  */
+/**************************/
+@media (max-width: 800px) {
+	.slider {
+		padding-bottom: 80px;
+	}
+}
+/**************************/
+/* media queries under 500px  */
+/**************************/
+@media (max-width: 500px) {
+	.slider {
+		padding-bottom: 40px;
+	}
+}

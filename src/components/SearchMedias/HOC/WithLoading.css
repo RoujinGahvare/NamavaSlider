@@ -1,0 +1,32 @@
+@keyframes progresswave {
+	from {
+		border: 3px #6eb8ff solid;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+	to {
+		border: 3px rgba(255, 255, 255, 0) solid;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+	}
+}
+
+.loader::before,
+.loader::after {
+	content: '';
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	animation: 1.2s linear infinite progresswave;
+}
+
+.loader::after {
+	animation-delay: 0.6s;
+}
